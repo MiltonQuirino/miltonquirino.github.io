@@ -718,51 +718,51 @@ var MovieDBService = (function () {
         this.http = http;
     }
     MovieDBService.prototype.listar = function () {
-        return this.http.get(BASE_URL + 'discover/movie?api_key=24c394dc69e95a2f51eb87e92fa76dd3&language=pt-BR&region=BR')
+        return this.http.get(BASE_URL + 'discover/movie?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR')
             .map(function (data) {
             return data.json();
         });
     };
     MovieDBService.prototype.listarGenero = function () {
-        return this.http.get(BASE_URL + 'genre/movie?api_key=24c394dc69e95a2f51eb87e92fa76dd3&language=pt-BR&region=BR')
+        return this.http.get(BASE_URL + 'genre/movie?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR')
             .map(function (data) {
             return data.json();
         });
     };
     MovieDBService.prototype.detail = function (id) {
         // tslint:disable-next-line:max-line-length
-        return this.http.get(BASE_URL + 'movie/' + id + '?api_key=24c394dc69e95a2f51eb87e92fa76dd3&language=pt-BR&region=BR')
+        return this.http.get(BASE_URL + 'movie/' + id + '?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR')
             .map(function (data) {
             return data.json();
         });
     };
     MovieDBService.prototype.genres = function (id) {
-        // https://api.themoviedb.org/3/discover/movie?api_key=24c394dc69e95a2f51eb87e92fa76dd3&with_genres=14
+        // https://api.themoviedb.org/3/discover/movie?api_key=c40d78981cfeac14b386753a4bb22608&with_genres=14
         // tslint:disable-next-line:max-line-length
-        return this.http.get(BASE_URL + 'discover/movie?api_key=24c394dc69e95a2f51eb87e92fa76dd3&language=pt-BR&region=BR&with_genres=' + id)
+        return this.http.get(BASE_URL + 'discover/movie?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR&with_genres=' + id)
             .map(function (data) {
             return data.json();
         });
     };
     MovieDBService.prototype.categories = function () {
-        return this.http.get(BASE_URL + 'genre/movie/list?api_key=24c394dc69e95a2f51eb87e92fa76dd3&language=pt-BR')
+        return this.http.get(BASE_URL + 'genre/movie/list?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR')
             .map(function (data) {
             return data.json();
         });
     };
     MovieDBService.prototype.team = function (id) {
         // tslint:disable-next-line:max-line-length
-        return this.http.get(BASE_URL + 'movie/' + id + '/casts?api_key=24c394dc69e95a2f51eb87e92fa76dd3&language=pt-BR&region=BR')
+        return this.http.get(BASE_URL + 'movie/' + id + '/casts?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR')
             .map(function (data) {
             return data.json();
         });
     };
     MovieDBService.prototype.infinityLoad = function (page, categoryId) {
         // tslint:disable-next-line:max-line-length
-        var params = 'discover/movie?api_key=24c394dc69e95a2f51eb87e92fa76dd3&language=pt-BR&region=BR&page=' + page;
+        var params = 'discover/movie?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR&page=' + page;
         if (categoryId) {
             // tslint:disable-next-line:max-line-length
-            params = 'discover/movie?api_key=24c394dc69e95a2f51eb87e92fa76dd3&language=pt-BR&region=BR&with_genres=' + categoryId + '&page=' + page;
+            params = 'discover/movie?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR&with_genres=' + categoryId + '&page=' + page;
         }
         return this.http.get(BASE_URL + params)
             .map(function (data) {
