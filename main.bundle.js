@@ -16,7 +16,7 @@ webpackEmptyContext.id = "../../../../../src async recursive";
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE HTML>\n<html>\n<head>\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n\t<title>The Movie Database</title>\n\n\t<script src=\"https://npmcdn.com/zone.js@0.6.12?main=browser\"></script>\n    <script src=\"https://npmcdn.com/reflect-metadata@0.1.3\"></script>\n    <script src=\"https://npmcdn.com/systemjs@0.19.27/dist/system.src.js\"></script>\n\n\t<script src=\"node_modules/chart.js/src/chart.js\"></script>\n</head>\n\n<body>\n\t<app-menu></app-menu>\n\t\n\t<router-outlet></router-outlet>\n\n\t <app-footer></app-footer> \n\n</body>\n\n</html>"
+module.exports = "<body>\n\n\t<app-menu></app-menu>\n\t<router-outlet></router-outlet>\n\t<app-footer></app-footer>\n\n</body>"
 
 /***/ }),
 
@@ -123,6 +123,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -145,6 +146,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_11__app_routes__["a" /* routing */],
             __WEBPACK_IMPORTED_MODULE_13_ng2_charts_ng2_charts__["ChartsModule"],
             __WEBPACK_IMPORTED_MODULE_14_ngx_infinite_scroll__["a" /* InfiniteScrollModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* JsonpModule */],
             __WEBPACK_IMPORTED_MODULE_6__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */].forRoot()
         ],
         providers: [
@@ -209,18 +211,17 @@ var HttpClient = (function () {
     }
     HttpClient.prototype.createAuthorizationHeader = function (headers) {
         headers.append('Content-Type', 'application/json');
-        // tslint:disable-next-line:max-line-length
         headers.set('x-access-token', 'a29a42d4b0a2b1f7702f9e1608ef458f');
     };
     HttpClient.prototype.get = function (url) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]();
         this.createAuthorizationHeader(headers);
         return this.http.get(url, {
             headers: headers
         });
     };
     HttpClient.prototype.post = function (url, data) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]();
         this.createAuthorizationHeader(headers);
         return this.http.post(url, data, {
             headers: headers
@@ -230,7 +231,7 @@ var HttpClient = (function () {
 }());
 HttpClient = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */]) === "function" && _a || Object])
 ], HttpClient);
 
 var _a;
@@ -241,7 +242,7 @@ var _a;
 /***/ "../../../../../src/app/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"footer\">\n\t<div class=\"container\">\n\t\t<div class=\"row text-muted\">\n\t\t\t<div class=\"offset-md-6 col-12 col-md-3\">\n\t\t\t\t<h5>Tecnologias utilizadas</h5>\n\t\t\t\t<p>HTML5, Sass, Bootstrap, TypeScript, Angular 4 </p>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-md-3\">\n\t\t\t\t<h5>Milton Quirino</h5>\n\t\t\t\t<p>Analista de sistemas </p>\n\t\t\t\t\t<p>miltonquirino.br@gmail.com</p>\n\t\t\t\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n</footer>"
+module.exports = "<footer class=\"footer\">\n\t<div class=\"container\">\n\t\t<div class=\"row text-muted\">\n\t\t\t<div class=\"offset-md-4 col-12 col-md-3\">\n\t\t\t\t<h5>Tecnologias utilizadas</h5>\n\t\t\t\t<p>HTML5, Sass, Bootstrap, TypeScript, Angular 4 </p>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-12 col-md-3\">\n\t\t\t\t<h5>Milton Quirino</h5>\n\t\t\t\t<p>Analista de sistemas </p>\n\t\t\t\t<a href=\"mailto:miltonquirino.br@gmail.com\">\n\t\t\t\t\t<span>miltonquirino.br@gmail.com</span>\n\t\t\t\t</a>\n\t\t\t</div>\n\t\t\t<div class=\"col-6 col-md-1 icon-footer \">\n\n\t\t\t\t<a href=\"https://github.com/MiltonQuirino\" target=\"_blank\">\n\t\t\t\t\t<i class=\"fa fa-github fa-4x\" aria-hidden=\"true\">\n\t\t\t\t\t\t</i>\n\t\t\t\t</a>\n\n\t\t\t</div>\n\t\t\t<div class=\"col-6 col-md-1 icon-footer \">\n\n\t\t\t\t<a href=\"https://www.linkedin.com/in/milton-quirino-148a6030/\" target=\"_blank\">\n\t\t\t\t\t<i class=\"fa fa-linkedin-square fa-4x\" aria-hidden=\"true\"></i>\n\t\t\t\t</a>\n\t\t\t</div>\n\n\t\t</div>\n\t</div>\n</footer>"
 
 /***/ }),
 
@@ -253,7 +254,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".footer {\n  padding-top: 14px;\n  background: rebeccapurple;\n  margin-top: 50px;\n  background: black;\n  color: white; }\n", ""]);
+exports.push([module.i, ".footer {\n  padding-top: 14px;\n  background: rebeccapurple;\n  margin-top: 50px;\n  background: black;\n  color: white; }\n\n.icon-footer {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center; }\n", ""]);
 
 // exports
 
@@ -335,7 +336,7 @@ TruncatePipe = __decorate([
 /***/ "../../../../../src/app/menu/menu.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n  <nav class=\"navbar navbar-toggleable-sm navbar-inverse  bg-inverse\">\n    <button class=\"navbar-toggler hidden-sm-up btn\" type=\"button\" (click)=\"isCollapsed = !isCollapsed\"><i class=\"fa fa-bars\" aria-hidden=\"true\"></i></button>\n    <a class=\"navbar-brand hidden-sm-down\" [routerLink]=\"['/movie']\"><img class=\"nav-log\" src=\"assets/images/the-movie-db.png\"></a>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/movie']\">Filmes</a>\n        </li>\n        <li>\n          <div ngbDropdown class=\"d-inline-block\">\n            <button class=\"btn btn-link dropdown-toggle\" id=\"dropdownCategory\" ngbDropdownToggle>Categorias</button>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownCategory\">\n              <button *ngFor=\"let category of categories\" class=\"dropdown-item\">\n              <a class=\"categories-menu\" [routerLink]=\"['/movie', category.id ]\">{{category.name}}</a> \n            </button>\n            </div>\n          </div>\n        </li>\n      </ul>\n    </div>\n\n    <div class=\"navbar-toggleable-xs\" [ngbCollapse]=\"isCollapsed\">\n      <ul class=\"nav navbar-nav\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/movie']\">Filmes</a>\n        </li>\n        <li>\n          <div ngbDropdown class=\"d-inline-block\">\n            <button class=\"btn btn-link dropdown-toggle\" id=\"dropdownCategory\" ngbDropdownToggle>Categorias</button>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownCategory\">\n              <button *ngFor=\"let category of categories\" class=\"dropdown-item\">\n              <a class=\"categories-menu\" [routerLink]=\"['/movie', category.id ]\">{{category.name}}</a> \n            </button>\n            </div>\n          </div>\n        </li>\n      </ul>\n    </div>\n\n  </nav>\n</header>"
+module.exports = "<header>\n  <nav class=\"navbar navbar-toggleable-sm navbar-inverse  bg-inverse\">\n    <button class=\"navbar-toggler hidden-sm-up btn\" type=\"button\" (click)=\"isCollapsed = !isCollapsed\"><i class=\"fa fa-bars\" aria-hidden=\"true\"></i></button>\n    <a class=\"navbar-brand hidden-sm-down\" [routerLink]=\"['/']\"><img class=\"nav-log\" src=\"assets/images/the-movie-db.png\"></a>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/movie']\">Filmes</a>\n        </li>\n        <li>\n          <div ngbDropdown class=\"d-inline-block\">\n            <button class=\"btn btn-link dropdown-toggle\" id=\"dropdownCategory\" ngbDropdownToggle>Categorias</button>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownCategory\">\n              <button *ngFor=\"let category of categories\" class=\"dropdown-item\">\n              <a class=\"categories-menu\" [routerLink]=\"['/movie', category.id ]\">{{category.name}}</a> \n            </button>\n            </div>\n          </div>\n        </li>\n      </ul>\n    </div>\n\n    <div class=\"navbar-toggleable-xs\" [ngbCollapse]=\"isCollapsed\">\n      <ul class=\"nav navbar-nav\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/movie']\">Filmes</a>\n        </li>\n        <li>\n          <div ngbDropdown class=\"d-inline-block\">\n            <button class=\"btn btn-link dropdown-toggle\" id=\"dropdownCategory\" ngbDropdownToggle>Categorias</button>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownCategory\">\n              <button *ngFor=\"let category of categories\" class=\"dropdown-item\">\n              <a class=\"categories-menu\" [routerLink]=\"['/movie', category.id ]\">{{category.name}}</a> \n            </button>\n            </div>\n          </div>\n        </li>\n      </ul>\n    </div>\n\n  </nav>\n</header>"
 
 /***/ }),
 
@@ -391,7 +392,6 @@ var MenuComponent = (function () {
             if (data) {
                 var response = data;
                 _this.categories = response.genres;
-                console.log(response.genres);
             }
         });
     };
@@ -414,7 +414,7 @@ var _a;
 /***/ "../../../../../src/app/movie-detail/movie-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"background-image\" [ngStyle]=\"{'background-image': 'url('+background+')'}\"></div>\n  <div *ngIf=\"movie\">\n    <section class=\"overview\">\n      <div class=\"content row\">\n        <div class=\"col-12 col-md-4 col-sm-12 col-xs-12 movie-image\">\n          <img src=\"https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie.poster_path}}\">\n        </div>\n        <div class=\"col-12 col-md-8 col-sm-12 col-xs-12\">\n\n          <h2>{{movie.title}}\n            <small class=\"text-muted\">({{movie.release_date | date: 'yyyy'}})</small>\n          </h2>\n\n          <h3>Sinopse</h3>\n          <p>{{movie.overview}}</p>\n\n          <h3>Equipe técnica principal</h3>\n          <div *ngIf=\"team\">\n            <div class=\"row\">\n              <div class=\"col-4\" *ngFor=\"let crew of team.crew| slice:0:6\">\n                <h6>{{ crew.name }} </h6>\n                <small class=\"text-muted\">{{ crew.job }}</small>\n              </div>\n            </div>\n          </div>\n\n        </div>\n      </div>\n    </section>\n\n    <section class=\"genres\">\n      <div class=\"row\">\n        <a class=\"categories-menu badge badge-default genre\" *ngFor=\"let gender of movie.genres| slice:0:4\" [routerLink]=\"['/movie', gender.id ]\">{{gender.name}}</a> \n        <!-- <span class=\"badge badge-default genre\"  *ngFor=\"let gender of movie.genres| slice:0:4\">{{gender.name}}</span> -->\n        \n      </div>\n    </section>\n\n    <section class=\"team\">\n      <h2>Elenco principal</h2>\n\n      <div *ngIf=\"team\">\n        <div class=\"row\">\n          <div class=\"col-6 col-md-3\" *ngFor=\"let cast of team.cast| slice:0:4\">\n            <img src=\"https://image.tmdb.org/t/p/w138_and_h175_bestv2/{{cast.profile_path}}\">\n            <h6>{{ cast.name }} </h6>\n            <small class=\"text-muted\">{{ cast.character }}</small>\n          </div>\n        </div>\n      </div>\n    </section>\n\n\n  </div>\n</div>\n\n\n\n<!-- <div style=\"display: block\">\n  <canvas width=\"100\" height=\"100\" baseChart\n              [data]=\"doughnutChartData\"\n              [labels]=\"doughnutChartLabels\"\n              [chartType]=\"doughnutChartType\"\n              (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\">\n  </canvas>\n</div> -->"
+module.exports = "<div class=\"container\">\n  <div class=\"background-image\" [ngStyle]=\"{'background-image': 'url('+background+')'}\"></div>\n  <div *ngIf=\"movie\">\n    <section class=\"overview\">\n      <div class=\"content row\">\n        <div class=\"col-12 col-md-4 col-sm-12 col-xs-12 movie-image\">\n          <img src=\"https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie.poster_path}}\">\n        </div>\n        <div class=\"col-12 col-md-8 col-sm-12 col-xs-12\">\n\n          <h2>{{movie.title}}\n            <small class=\"text-muted\">({{movie.release_date | date: 'yyyy'}})</small>\n          </h2>\n\n          <h3>Sinopse</h3>\n          <article>\n            <p>{{movie.overview}}</p>\n          </article>\n          <h3>Equipe técnica principal</h3>\n          <div *ngIf=\"team\">\n            <div class=\"row\">\n              <div class=\"col-4\" *ngFor=\"let crew of team.crew| slice:0:6\">\n                <h6>{{ crew.name }} </h6>\n                <small class=\"text-muted\">{{ crew.job }}</small>\n              </div>\n            </div>\n          </div>\n\n        </div>\n      </div>\n    </section>\n\n    <section class=\"genres\">\n      <div class=\"row\">\n        <a class=\"categories-menu badge badge-default genre\" *ngFor=\"let gender of movie.genres| slice:0:4\" [routerLink]=\"['/movie', gender.id ]\">{{gender.name}}</a>\n      </div>\n    </section>\n\n    <section class=\"team\">\n      <h2>Elenco principal</h2>\n\n      <div *ngIf=\"team\">\n        <div class=\"row\">\n          <div class=\"col-6 col-md-3\" *ngFor=\"let cast of team.cast| slice:0:4\">\n            <img src=\"https://image.tmdb.org/t/p/w138_and_h175_bestv2/{{cast.profile_path}}\">\n            <h6>{{ cast.name }} </h6>\n            <small class=\"text-muted\">{{ cast.character }}</small>\n          </div>\n        </div>\n      </div>\n    </section>\n\n\n  </div>\n</div>"
 
 /***/ }),
 
@@ -460,48 +460,29 @@ var MovieDetailComponent = (function () {
     function MovieDetailComponent(route, service) {
         this.route = route;
         this.service = service;
-        // Chart
-        this.doughnutChartLabels = ['Gostei', 'Não gostei'];
-        this.doughnutChartData = [50, 50];
-        this.doughnutChartType = 'doughnut';
-        this.doughnutChartColors = ['gray', 'blue'];
     }
     MovieDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.subscribe(function (params) {
-            _this.id = +params['id']; // (+) converts string 'id' to a number
-            _this.loadAplicacao();
+            _this.id = +params['id'];
+            _this.load();
         });
     };
-    MovieDetailComponent.prototype.loadAplicacao = function () {
+    MovieDetailComponent.prototype.load = function () {
         var _this = this;
         this.service.detail(this.id)
             .subscribe(function (data) {
             if (data) {
                 _this.movie = data;
                 _this.background = 'https://image.tmdb.org/t/p/w1400_and_h450_bestv2/' + _this.movie.backdrop_path;
-                //  this.loadChard();
-                console.log(data);
             }
         });
         this.service.team(this.id)
             .subscribe(function (data) {
             if (data) {
                 _this.team = data;
-                console.log(data);
             }
         });
-    };
-    MovieDetailComponent.prototype.loadChard = function () {
-        this.doughnutChartData = [(this.movie.vote_average * 100), ((10 - this.movie.vote_average) * 100)];
-        // this.doughnutChartData = [10, 60 ];
-    };
-    // events
-    MovieDetailComponent.prototype.chartClicked = function (e) {
-        console.log(e);
-    };
-    MovieDetailComponent.prototype.chartHovered = function (e) {
-        console.log(e);
     };
     return MovieDetailComponent;
 }());
@@ -522,7 +503,7 @@ var _a, _b;
 /***/ "../../../../../src/app/movie/movie.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "  <div class=\"container\">\n    <div>\n      <div class=\"row\">\n\n        <div class=\"col-12 col-sm-6 box-movie box_shadow\" *ngFor=\"let movie of movies\">\n          <div class=\"row\">\n            <div class=\"col-6 col-sm-4 col-md-4\">\n                <img src=\"https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie.poster_path}}\">\n            </div>\n            <div class=\"col-6 col-sm-8 col-md-8 box-descrition\">\n              <p class=\"space-between\">\n                <a [routerLink]=\"['/movie-detail', movie.id ]\"><h5 class=\"title-movie\">{{movie.title | truncate:[28] }}</h5></a>\n                <span class=\"movie-detail\">{{movie.vote_average}} <i class=\"fa fa-star\" aria-hidden=\"true\"></i></span>\n              </p>\n\n              <p class=\"calendar-categories\"><i class=\"fa fa-calendar\" aria-hidden=\"true\"></i> {{movie.release_date | date: 'dd/MM/yyyy' }}</p>\n              \n              <!-- <div class=\"hidden-sm-down\">\n                <p>{{movie.overview | truncate:[80] }}</p>\n              </div> -->\n               <!-- <div class=\"hidden-sm-down\"> -->\n                <p>{{movie.overview | truncate:[90] }}</p>\n              <!-- </div>  -->\n              \n               <!-- <div class=\"hidden-sm-up\">\n                <p>{{movie.overview | truncate:[180] }}</p>\n              </div>  -->\n              \n\n              \n             \n\n              <div class=\"row\">\n                <div class=\"col  text-center\">\n                  <a class=\"btn btn-outline-info\" [routerLink]=\"['/movie-detail', movie.id ]\">Mais informações</a> \n                </div>\n              </div>\n\n            </div>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n    <div class=\"search-results\"\n\t\t    infiniteScroll\n\t\t    [infiniteScrollDistance]=\"2\"\n\t\t    [infiniteScrollThrottle]=\"400\"\n\t\t    (scrolled)=\"onScroll()\">\n    </div>\n        \n  </div>\n\n\n"
+module.exports = "<div class=\"container\">\n  <div>\n    <div class=\"row\">\n\n      <div class=\"col-12 col-sm-6 box-movie box_shadow\" *ngFor=\"let movie of movies\">\n        <div class=\"row\">\n          <div class=\"col-6 col-sm-4 col-md-4\">\n            <img src=\"https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie.poster_path}}\">\n          </div>\n          <div class=\"col-6 col-sm-8 col-md-8 box-descrition\">\n            <p class=\"space-between\">\n              <a [routerLink]=\"['/movie-detail', movie.id ]\">\n                <h5 class=\"title-movie\">{{movie.title | truncate:[28] }}</h5>\n              </a>\n              <span class=\"movie-detail\">{{movie.vote_average}} <i class=\"fa fa-star\" aria-hidden=\"true\"></i></span>\n            </p>\n\n            <p class=\"calendar-categories\"><i class=\"fa fa-calendar\" aria-hidden=\"true\"></i> {{movie.release_date | date: 'dd/MM/yyyy' }}</p>\n            <article>\n              <p>{{movie.overview | truncate:[90] }}</p>\n            </article>\n\n            <div class=\"row\">\n              <div class=\"col  text-center\">\n                <a class=\"btn btn-outline-info\" [routerLink]=\"['/movie-detail', movie.id ]\">Mais informações</a>\n              </div>\n            </div>\n\n          </div>\n        </div>\n      </div>\n\n    </div>\n  </div>\n\n  <div class=\"search-results\" infiniteScroll [infiniteScrollDistance]=\"2\" [infiniteScrollThrottle]=\"400\" (scrolled)=\"onScroll()\">\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -573,22 +554,25 @@ var MovieComponent = (function () {
     }
     MovieComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.loadAplicacao();
-        this.route.params.subscribe(function (params) {
-            _this.categoryId = +params['id'];
-            if (_this.categoryId) {
-                _this.loadGenres(_this.categoryId);
-            }
-        });
+        if (this.isDiscover()) {
+            this.loadAplicacao();
+        }
+        else {
+            this.route.params.subscribe(function (params) {
+                _this.categoryId = +params['id'];
+                if (_this.categoryId) {
+                    _this.loadGenres(_this.categoryId);
+                }
+            });
+        }
     };
     MovieComponent.prototype.loadAplicacao = function () {
         var _this = this;
-        this.service.listar()
+        this.service.discover()
             .subscribe(function (data) {
             if (data) {
                 var response = data;
                 _this.movies = response.results;
-                console.log(response.results);
             }
         });
     };
@@ -610,9 +594,15 @@ var MovieComponent = (function () {
             if (data) {
                 var response = data;
                 _this.movies = response.results;
-                console.log(response.results);
             }
         });
+    };
+    MovieComponent.prototype.isDiscover = function () {
+        var param = Number(document.URL.slice(document.URL.length - 1));
+        if (param) {
+            return false;
+        }
+        return true;
     };
     return MovieComponent;
 }());
@@ -699,6 +689,7 @@ PageNotFoundComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_HttpClient__ = __webpack_require__("../../../../../src/app/config/HttpClient.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MovieDBService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -712,71 +703,63 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var BASE_URL = 'https://api.themoviedb.org/3/';
 var MovieDBService = (function () {
-    function MovieDBService(http) {
+    function MovieDBService(http, _jsonp) {
         this.http = http;
+        this._jsonp = _jsonp;
     }
-    MovieDBService.prototype.listar = function () {
-        return this.http.get(BASE_URL + 'discover/movie?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR')
-            .map(function (data) {
-            return data.json();
-        });
-    };
-    MovieDBService.prototype.listarGenero = function () {
-        return this.http.get(BASE_URL + 'genre/movie?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR')
-            .map(function (data) {
+    MovieDBService.prototype.discover = function () {
+        return this._jsonp.get(BASE_URL + 'discover/movie?' + this.params()).map(function (data) {
             return data.json();
         });
     };
     MovieDBService.prototype.detail = function (id) {
-        // tslint:disable-next-line:max-line-length
-        return this.http.get(BASE_URL + 'movie/' + id + '?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR')
+        return this._jsonp.get(BASE_URL + 'movie/' + id + '?' + this.params())
             .map(function (data) {
             return data.json();
         });
     };
     MovieDBService.prototype.genres = function (id) {
-        // https://api.themoviedb.org/3/discover/movie?api_key=c40d78981cfeac14b386753a4bb22608&with_genres=14
-        // tslint:disable-next-line:max-line-length
-        return this.http.get(BASE_URL + 'discover/movie?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR&with_genres=' + id)
+        return this._jsonp.get(BASE_URL + 'discover/movie?with_genres=' + id + '&' + this.params())
             .map(function (data) {
             return data.json();
         });
     };
     MovieDBService.prototype.categories = function () {
-        return this.http.get(BASE_URL + 'genre/movie/list?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR')
+        return this._jsonp.get(BASE_URL + 'genre/movie/list?' + this.params())
             .map(function (data) {
             return data.json();
         });
     };
     MovieDBService.prototype.team = function (id) {
-        // tslint:disable-next-line:max-line-length
-        return this.http.get(BASE_URL + 'movie/' + id + '/casts?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR')
+        return this._jsonp.get(BASE_URL + 'movie/' + id + '/casts?' + this.params())
             .map(function (data) {
             return data.json();
         });
     };
     MovieDBService.prototype.infinityLoad = function (page, categoryId) {
-        // tslint:disable-next-line:max-line-length
-        var params = 'discover/movie?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR&page=' + page;
+        var params = 'discover/movie?page=' + page + '&' + this.params();
         if (categoryId) {
-            // tslint:disable-next-line:max-line-length
-            params = 'discover/movie?api_key=c40d78981cfeac14b386753a4bb22608&language=pt-BR&region=BR&with_genres=' + categoryId + '&page=' + page;
+            params = 'discover/movie?with_genres=' + categoryId + '&page=' + page + '&' + this.params();
         }
-        return this.http.get(BASE_URL + params)
+        return this._jsonp.get(BASE_URL + params)
             .map(function (data) {
             return data.json();
         });
+    };
+    MovieDBService.prototype.params = function () {
+        return 'api_key=c40d78981cfeac14b386753a4bb22608&callback=JSONP_CALLBACK&language=pt-BR&region=BR';
     };
     return MovieDBService;
 }());
 MovieDBService = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__config_HttpClient__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__config_HttpClient__["a" /* HttpClient */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__config_HttpClient__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__config_HttpClient__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["e" /* Jsonp */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["e" /* Jsonp */]) === "function" && _b || Object])
 ], MovieDBService);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=movie-dbservice.service.js.map
 
 /***/ }),
